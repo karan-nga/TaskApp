@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     
     fun initFootView() {
         if(!isInFoot) {
-            selectedValue = selectedValue / 30.48F
+            selectedValue /= 30.48F
             isInFoot
         }
         Toast.makeText(this, "Foot", Toast.LENGTH_SHORT).show()
