@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Frag2">
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/ruler_float"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:gv_minValue="0"
+        app:gv_currentValue="5"
+        android:background="@color/white"
+        app:zjun_indicatorLineColor="@color/black"
+        app:zjun_textColor="@color/black"
+        app:gv_maxValue="10"
+        app:zjun_textSize="18sp" />
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="5 foot"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</LinearLayout>
