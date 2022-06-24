@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Your Profile"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleButtonGroup"
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_gravity="end"
+        android:layout_height="wrap_content"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAndroid"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="10dp"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:text="cm" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFlutter"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            app:cornerRadius="10dp"
+            android:textAllCaps="false"
+
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="foot" />
+
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="HEIGHT"
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_marginStart="30dp"
+    android:layout_marginBottom="10dp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fra_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+<!--    <com.kevalpatel2106.rulerpicker.RulerValuePicker-->
+<!--        android:id="@+id/ruler_picker"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@android:color/white"-->
+<!--        app:indicator_color="@android:color/black"-->
+<!--        app:ruler_text_color="@color/black"-->
+<!--        app:indicator_interval="14dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:indicator_width="2dp"-->
+<!--        app:max_value="250"-->
+<!--        app:min_value="0"-->
+<!--        app:notch_color="@android:color/white"-->
+<!--        app:ruler_text_size="6sp"/>-->
+
+<!--    <com.zjun.widget.RuleView-->
+<!--        android:id="@+id/ruler_float"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        app:gv_minValue="0"-->
+<!--        android:background="@color/white"-->
+<!--        app:zjun_indicatorLineColor="@color/black"-->
+<!--        app:zjun_textColor="@color/black"-->
+<!--        app:gv_maxValue="10"-->
+<!--        app:zjun_textSize="18sp" />-->
+
+</LinearLayout>
+
+
+
+
+</LinearLayout>
