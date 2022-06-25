@@ -1,2 +1,3 @@
 # Height Selecting Scale app
-![image](https://user-images.githubusercontent.com/70756383/175733199-dfc0a5d8-d8b8-4e97-8fb4-5223cc7d4123.png)
+![image](https://user-images.githubusercontent.com/70756383/175789043-dfd6ad32-7282-4b74-b9d2-8885690b2143.png)
+
