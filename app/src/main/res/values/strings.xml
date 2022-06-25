@@ -2,4 +2,8 @@
     <string name="app_name">TaskApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="complete_your_profile">Complete Your Profile</string>
+    <string name="height">Height</string>
+    <string name="foot_string">%1$d Feet %2$d Inches</string>
+    <string name="cm_string">%1$d cm</string>
 </resources>

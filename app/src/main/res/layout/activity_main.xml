@@ -1,101 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complete Your Profile"
         android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:text="@string/complete_your_profile"
+        android:textAppearance="@android:style/TextAppearance.Large"
         android:textColor="@color/black"
-        android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/height"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintEnd_toStartOf="@id/toggleButtonGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/toggleButtonGroup"
+        app:layout_constraintTop_toTopOf="@id/toggleButtonGroup" />
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggleButtonGroup"
         android:layout_width="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_gravity="end"
         android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        app:selectionRequired="true"
+        app:checkedButton="@id/btn_cm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toEndOf="@id/tv_height"
+        android:layout_margin="20dp"
         app:singleSelection="true">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnAndroid"
+            android:id="@+id/btn_cm"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cornerRadius="10dp"
-            android:textColor="@color/black"
+            android:text="cm"
             android:textAllCaps="false"
-            android:text="cm" />
+            android:textColor="@color/black"
+            app:cornerRadius="10dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFlutter"
+            android:id="@+id/btn_foot"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:layout_width="wrap_content"
-            app:cornerRadius="10dp"
-            android:textAllCaps="false"
-
-            android:textColor="@color/black"
             android:layout_height="wrap_content"
-            android:text="foot" />
-
-
+            android:text="foot"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:cornerRadius="10dp" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.zjun.widget.RuleView
+        android:id="@+id/rv_height_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"
+        app:zjun_indicatorLineColor="@color/black"
+        android:layout_marginEnd="20dp"
+        app:zjun_textColor="@color/black"
+        app:zjun_textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonGroup" />
+
+     <TextView
+         android:id="@+id/tv_selected_value"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_constraintTop_toBottomOf="@id/rv_height_ruler"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         android:textStyle="bold"
+         android:textSize="14sp"
+         android:textColor="@color/black"
+         android:layout_marginTop="10dp"
+         tools:text="5 Foot 11 Inches" />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="HEIGHT"
+    app:layout_constraintBottom_toTopOf="@+id/linear"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginStart="20dp"
     android:textColor="@color/black"
-    android:textSize="20sp"
-    android:textStyle="bold"
-    android:layout_marginStart="30dp"
-    android:layout_marginBottom="10dp"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fra_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-<!--    <com.kevalpatel2106.rulerpicker.RulerValuePicker-->
-<!--        android:id="@+id/ruler_picker"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:background="@android:color/white"-->
-<!--        app:indicator_color="@android:color/black"-->
-<!--        app:ruler_text_color="@color/black"-->
-<!--        app:indicator_interval="14dp"-->
-<!--        android:visibility="gone"-->
-<!--        app:indicator_width="2dp"-->
-<!--        app:max_value="250"-->
-<!--        app:min_value="0"-->
-<!--        app:notch_color="@android:color/white"-->
-<!--        app:ruler_text_size="6sp"/>-->
+    android:layout_marginBottom="10dp"
+    android:textSize="12sp"
+    android:text="Profile Completion"/>
 
-<!--    <com.zjun.widget.RuleView-->
-<!--        android:id="@+id/ruler_float"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="100dp"-->
-<!--        app:gv_minValue="0"-->
-<!--        android:background="@color/white"-->
-<!--        app:zjun_indicatorLineColor="@color/black"-->
-<!--        app:zjun_textColor="@color/black"-->
-<!--        app:gv_maxValue="10"-->
-<!--        app:zjun_textSize="18sp" />-->
-
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="120dp"
+        android:gravity="center_horizontal|center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="30%"
+            android:textColor="@color/black" />
 
+        <ProgressBar
+            android:id="@+id/SHOW_PROGRESS"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="200dp"
+            android:layout_height="15dp"
+            android:layout_margin="10dp"
+            android:progress="30"
+            android:textAlignment="center" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/teal_200"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="40dp"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
