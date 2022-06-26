@@ -82,7 +82,7 @@
         app:zjun_indicatorLineColor="@color/black"
         android:layout_marginEnd="20dp"
         app:zjun_textColor="@color/black"
-        app:zjun_textSize="14sp"
+        app:zjun_textSize="15sp"
         app:layout_constraintTop_toBottomOf="@id/toggleButtonGroup" />
 
      <TextView

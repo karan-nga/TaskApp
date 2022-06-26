@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.rvHeightRuler.setValue(MIN_RULER_RANGE, MAX_CM_RANGE, DEFAULT_SELECTED_VALUE, 1F, MM_PER_CM)
+
         binding.rvHeightRuler.setOnValueChangedListener(RuleView.OnValueChangedListener {
             selectedValue = it
             if(isInFoot) {
@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
 
         })
+        initCMView()
     }
 
     fun initCMView() {
